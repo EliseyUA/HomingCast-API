@@ -1,0 +1,43 @@
+site_name: HomingCast
+site_url: https://sitename.example
+theme:
+  name: material
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: Missile.png
+  favicon: Missile.ico
+  palette: 
+    scheme: slate
+    primary: blue grey
+    accent: deep purple
+markdown_extensions:
+  - attr_list
+  - def_list
+  - md_in_html
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.snippets:
+      check_paths: true
+      url_download: false
+      url_max_size: 33554432
+      url_timeout: 10
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+nav:
+  - HomingCast: index.md
+  - Guide:
+    - Caster: Caster.md
+    - Properties: Properties.md
+    - Custom Trajectories: CustomTrajectories.md
+    - InfoCast:
+      - InfoCast: InfoCast.md
+      - Methods: Methods.md
+  - Example: Example.md
+  - Updates: Updates.md
