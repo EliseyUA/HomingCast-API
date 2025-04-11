@@ -36,6 +36,7 @@ nav:
     - Caster: Caster.md
     - Properties: Properties.md
     - Custom Trajectories: CustomTrajectories.md
+    - Physics Simulation: Physics.md
     - InfoCast:
       - InfoCast: InfoCast.md
       - Methods: Methods.md

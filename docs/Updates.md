@@ -1,3 +1,18 @@
+## Update [1.5]  
+Date: 12.03.2025  
+### Changed method names:  
+* MaxAngle -> MaxAngleToLoseTheTarget   
+
+### Optimizations:  
+* Optimized custom trajectory code a bit
+* General optimizations
+
+### Updates
+* Updated custom trajectory plugin
+* Added realistic physics simulation
+
+---
+
 ## Update [1.4]  
 Date: 27.03.2025  
 ### Changed names:  

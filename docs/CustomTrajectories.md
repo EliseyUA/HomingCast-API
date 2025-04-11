@@ -47,3 +47,14 @@ Once you've created the points, press the **Save** button. This will generate a 
         MaxHeight = 200
     }
     ```
+
+---
+
+## Modes
+
+There're 2 modes:
+
+- **Trajectory** - To create a custom trajectory curve **(default)**
+- **AoA** - To create yaw / pitch angle of attack tables
+
+To change the mode, click ```Mode``` button

@@ -3,6 +3,8 @@
 !!! info "Remember!"
     These methods must be applied to [InfoCast](InfoCast.md)
 
+## Non-Physics methods
+
 ---
 ### TerminateCast
 ```lua
@@ -78,16 +80,16 @@ InfoCast:AddRotationSpeed(Number: number)
 Adds the speed of rotation to the cast.
 
 ---
-### SetMaxAngle
+### SetMaxAngleToLoseTheTarget
 ```lua
-InfoCast:SetMaxAngle(Angle: number)
+InfoCast:SetMaxAngleToLoseTheTarget(Angle: number)
 ```
 Sets the angle at which the cast loses its target.
 
 ---
-### AddMaxAngle
+### AddMaxAngleToLoseTheTarget
 ```lua
-InfoCast:AddMaxAngle(Angle: number)
+InfoCast:AddMaxAngleToLoseTheTarget(Angle: number)
 ```
 Adds to the angle at which the cast loses its target.
 
@@ -194,3 +196,153 @@ Sets the target to the given value.
 
 !!! warning "Beware!"
     Setting a new target too frequently can lead to unexpected behaviors!
+---
+
+
+## Physics methods
+
+
+### SetMass
+```lua
+Simulation:SetMass(Mass: number)
+```
+Sets the mass used for the physics simulation
+
+---
+### AddMass
+```lua
+Simulation:AddMass(Mass: number)
+```
+Adds to the mass used for the physics simulation
+
+---
+### SetLiftPower
+```lua
+Simulation:SetLiftPower(LiftPower: number)
+```
+Sets the lift power used for the physics simulation
+
+---
+### AddLiftPower
+```lua
+Simulation:AddLiftPower(LiftPower: number)
+```
+Adds to the lift power used for the physics simulation
+
+---
+### SetYawPower
+```lua
+Simulation:SetYawPower(YawPower: number)
+```
+Sets the yaw power used for the physics simulation
+
+---
+### AddYawPower
+```lua
+Simulation:AddYawPower(YawPower: number)
+```
+Adds to the yaw power used for the physics simulation
+
+---
+### SetDragCoefficient
+```lua
+Simulation:SetDragCoefficient(DragCoefficient: number)
+```
+Sets the drag coefficient used for the physics simulation
+
+---
+### AddDragCoefficient
+```lua
+Simulation:AddDragCoefficient(DragCoefficient: number)
+```
+Adds to the drag coefficient used for the physics simulation
+
+---
+### SetInducedDragYaw
+```lua
+Simulation:SetInducedDragYaw(InducedDragYaw: number)
+```
+Sets the yaw-induced drag value used for the physics simulation
+
+---
+### AddInducedDragYaw
+```lua
+Simulation:AddInducedDragYaw(InducedDragYaw: number)
+```
+Adds to the yaw-induced drag value used for the physics simulation
+
+---
+### SetInducedDragPitch
+```lua
+Simulation:SetInducedDragPitch(InducedDragPitch: number)
+```
+Sets the pitch-induced drag value used for the physics simulation
+
+---
+### AddInducedDragPitch
+```lua
+Simulation:AddInducedDragPitch(InducedDragPitch: number)
+```
+Adds to the pitch-induced drag value used for the physics simulation
+
+---
+### SetThrustPower
+```lua
+Simulation:SetThrustPower(ThrustPower: number)
+```
+Sets the thrust power used for the physics simulation
+
+---
+### AddThrustPower
+```lua
+Simulation:AddThrustPower(ThrustPower: number)
+```
+Adds to the thrust power used for the physics simulation
+
+---
+### SetMaxAngle
+```lua
+Simulation:SetMaxAngle(MaxAngle: number)
+```
+Sets the maximum angle used for the physics simulation
+
+
+Means max angle from velocity direction
+
+---
+### AddMaxAngle
+```lua
+Simulation:AddMaxAngle(MaxAngle: number)
+```
+Adds to the maximum angle used for the physics simulation
+
+
+Means max angle from velocity direction
+
+---
+### SetPitchAoA
+```lua
+Simulation:SetPitchAoA(PitchAoA: {})
+```
+Sets the angle of attack curve for pitch in the physics simulation
+
+---
+### YawAoA
+```lua
+Simulation:YawAoA(YawAoA: {})
+```
+Sets the angle of attack curve for yaw in the physics simulation
+
+---
+### SetAdditionalForces
+```lua
+Simulation:SetAdditionalForces(Force: Vector3)
+```
+Sets the additional forces applied to the physics simulation
+
+---
+### AddAdditionalForces
+```lua
+Simulation:AddAdditionalForces(Force: Vector3)
+```
+Adds to the additional forces applied to the physics simulation

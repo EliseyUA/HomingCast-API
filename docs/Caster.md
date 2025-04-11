@@ -42,6 +42,11 @@ Caster:Fire(StartPosition: Vector3, StartDirection: Vector3, Speed: number | Vec
 
 The `Caster:Fire` function returns an [InfoCast](InfoCast.md)
 
+!!! danger "Beware"
+    If you use [physics simulation](Physics.md), ```speed``` parameter will become not a constant speed, but an impulse
+
+    If ```Speed``` parameter is number then impluse will be applied in ```StartDirection```
+
 ---
 ## Caster contains 5 signals
 
