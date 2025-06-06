@@ -37,8 +37,8 @@ nav:
     - Properties: Properties.md
     - Custom Trajectories: CustomTrajectories.md
     - Physics Simulation: Physics.md
+    - Parallel Simulation: Parallel.md
     - InfoCast:
       - InfoCast: InfoCast.md
       - Methods: Methods.md
-  - Example: Example.md
   - Updates: Updates.md

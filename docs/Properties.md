@@ -91,6 +91,13 @@ Properties.CosmeticBulletFolder :: any
 The folder used to contain cosmetic bullets
 
 ---
+### CosmeticBulletTemplate
+```lua
+Properties.CosmeticBulletTemplate :: any
+```
+The cosmetic bullet itself
+
+---
 ### Prediction
 ```lua
 Properties.Prediction :: boolean
@@ -128,6 +135,44 @@ If this value is greater than `0` (e.g., `0.1, 0.2, 0.3, ..., 1`), the module wi
     Setting this value to extreme small numbers (e.g., `0.01` or smaller) can cause significant lag
     
     Recommended values range from **0.1**
+
+---
+### Offset
+```lua
+Properties.Offset :: (TotalTime: number, DeltaTime: number, TargetPosition: Vector3, CurrentPosition: Vector3) -> (Vector3)
+```
+This function affects the target's position
+
+!!! example "Example"
+    ```lua
+    Properties.Offset = function(TotalTime, DeltaTime, TargetPosition, CurrentPosition)
+        return Vector3.new(0, 10, 0)
+    end
+    ```
+    The projectile will fly above the target's actual position
+
+!!! info "How does **Offset** work?"
+    ```luau
+    TargetPosition += Offset(TotalTime, DeltaTime, TargetPosition, CurrentPosition)
+    ```
+
+---
+### Scaler
+```lua
+Properties.Scaler :: (TotalTime: number, DeltaTime: number, TargetPosition: Vector3, CurrentPosition: Vector3) -> (Vector3 | number)
+```
+This function affects the target's position
+
+!!! info "How does **Scaler** work?"
+    ```luau
+    TargetPosition *= Scaler(TotalTime, DeltaTime, TargetPosition, CurrentPosition)
+    ```
+
+!!! danger "Remember!"
+    First, the target's position will be scaled, and then an offset will be applied
+    ```luau
+    TargetPosition = TargetPosition * Scaler(...) + Offset(...)
+    ```
 
 ---
 ### UserData

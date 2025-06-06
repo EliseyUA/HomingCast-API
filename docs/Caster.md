@@ -20,15 +20,13 @@ local Caster = HomingCast.new()
 !!! warning "Remember!"
     The `Caster` must be created only once, as it serves as the base for all casts
 
-    You can look at the [example](Example.md)
-
 ---
 ### What is Caster?
 
 `Caster` is used to start the simulation of a cast
 
 ```luau
-Caster:Fire(StartPosition: Vector3, StartDirection: Vector3, Speed: number | Vector3, Target: Model | BasePart | Vector3, Properties)
+Caster:Fire(StartPosition: Vector3, StartDirection: Vector3, Speed: number | Vector3, Target: Model | BasePart | Vector3, Properties, PhysicsProperties?)
 ```
 
 !!! question "How to get Properties?"
