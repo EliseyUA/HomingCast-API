@@ -1,3 +1,14 @@
+## Update [1.6]  
+Date: 06.06.2025  
+### Added properties:  
+* Offset
+* Scaler
+
+### Updates
+* Added parallel mode
+
+---
+
 ## Update [1.5]  
 Date: 12.03.2025  
 ### Changed method names:  
