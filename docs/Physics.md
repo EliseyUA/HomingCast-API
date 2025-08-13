@@ -143,11 +143,11 @@ This is a list which determines the yaw coefficient at some angle of attack yaw
       
 ---
 
-### MaxAngle
+### G_Limit
 ```lua
-PhysicsProperties.MaxAngle :: number
+PhysicsProperties.G_Limit :: number
 ```
-You can consider this as a G limit, but currently is used just to get proper corner velocity
+G limit of the projectile
       
 ---
 

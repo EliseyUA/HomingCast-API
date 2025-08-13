@@ -29,7 +29,7 @@ Here are all the controls:
     The **Free** state is the standard state, allowing height to change during flight
 
 - **Use the mouse wheel** to adjust the maximum height
-- **Press `C` on a point** to create a checkpoint
+- **Press `G` on a point** to create a checkpoint
 
 !!! question "What is a `Checkpoint`?"
     A checkpoint contains a name. When the `Caster` reaches this point, it will fire the `CheckpointReached` signal.
@@ -42,9 +42,9 @@ Once you've created the points, press the **Save** button. This will generate a 
 !!! example "Example"
     ```lua
     Properties.Trajectory = {
-        {["Yscale"] = 0.7392795883361921, ["Xscale"] = 0.1490480939713951, ["State"] = "Free"},
-        {["Yscale"] = 0.7438536306460835, ["Xscale"] = 0.7176853600471377, ["State"] = "Free"},
-        MaxHeight = 200
+        {Yscale = 0.3, Xscale = 0.12220414727926254, State = "Free", MaxHeight = 150},
+        {Yscale = 0.6, Xscale = 0.310281366109848, State = "Free", MaxHeight = 150},
+        {Yscale = 0.6, Xscale = 0.903989744186401, State = "Free", CheckPoint = "Above", MaxHeight = 150},
     }
     ```
 

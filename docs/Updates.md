@@ -1,3 +1,25 @@
+## Update [1.7]  
+Date: 13.08.2025  
+### Changed property name:  
+* MaxAngle -> G_Limit
+
+### Optimizations:  
+* Significantly optimized custom trajectory code
+
+### Updates
+* Removed parallel mode
+* Reworked custom trajectory plugin
+* Removed batch system
+
+### Added new methods:  
+* SetTimer
+* IsPhysics
+* GetCosmeticBullet 
+* SetScaler
+* SetOffset
+
+---
+
 ## Update [1.6]  
 Date: 06.06.2025  
 ### Added properties:  

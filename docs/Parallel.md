@@ -1,3 +1,5 @@
+# This feature was removed in update 1.7
+
 To enable this feature, do the following:
 
 ```luau

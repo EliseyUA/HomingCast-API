@@ -51,7 +51,7 @@ The `Caster:Fire` function returns an [InfoCast](InfoCast.md)
 ### PositionChanged
 
 ```luau
-PositionChanged(InfoCast, Position: Vector3, Direction: Vector3, Distance: number, Target: Vector3 | BasePart, CosmeticBullet: BasePart?, UserData: {})
+PositionChanged(InfoCast, Position: Vector3, Direction: Vector3, Distance: number, Target: Vector3 | BasePart, CosmeticBullet: any?, UserData: {})
 ```
 
 This signal fires every time the `Caster` moves
@@ -73,7 +73,7 @@ This signal fires every time the `Caster` moves
 ### RayHit
 
 ```luau
-RayHit(InfoCast, RayCastResult: RaycastResult, Direction: Vector3, CosmeticBullet: BasePart?, UserData: {})
+RayHit(InfoCast, RayCastResult: RaycastResult, Direction: Vector3, CosmeticBullet: any?, UserData: {})
 ```
 
 This signal fires when the `Caster` hits something
@@ -90,6 +90,7 @@ This signal fires when the `Caster` terminates due to exceeding the maximum flig
 !!! question "What is `Reason`?"
     The `Reason` parameter indicates why the cast was terminated. Possible values:
     
+    * `Custom Reason` - The reason that was defined in ```TerminateCast``` method
     * `Self` - The cast was terminated manually
     * `MaxDistance` - The cast exceeded the maximum flight distance
     * `MaxFlyTime` - The cast exceeded the maximum flight time
@@ -98,7 +99,7 @@ This signal fires when the `Caster` terminates due to exceeding the maximum flig
 ### TargetLost
 
 ```luau
-TargetLost(InfoCast, LostTarget: Vector3 | BasePart, Position: Vector3, Direction: Vector3, CosmeticBullet: BasePart?, UserData: {})
+TargetLost(InfoCast, LostTarget: Vector3 | BasePart, Position: Vector3, Direction: Vector3, CosmeticBullet: any?, UserData: {})
 ```
 
 This signal fires when the `Caster` loses its target
@@ -107,7 +108,7 @@ This signal fires when the `Caster` loses its target
 ### CheckpointReached
 
 ```luau
-CheckpointReached(InfoCast, CheckpointName: string, Position: Vector3, Direction: Vector3, CosmeticBulletTemplate: BasePart, UserData: {})
+CheckpointReached(InfoCast, CheckpointName: string, Position: Vector3, Direction: Vector3, CosmeticBulletTemplate: any?, UserData: {})
 ```
 
 This signal fires when the `Caster` reaches a point in the trajectory

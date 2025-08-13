@@ -86,14 +86,14 @@ Defines the `RaycastParams` for the cast (Optional)
 ---
 ### CosmeticBulletFolder
 ```lua
-Properties.CosmeticBulletFolder :: any
+Properties.CosmeticBulletFolder :: any?
 ```
 The folder used to contain cosmetic bullets
 
 ---
 ### CosmeticBulletTemplate
 ```lua
-Properties.CosmeticBulletTemplate :: any
+Properties.CosmeticBulletTemplate :: any?
 ```
 The cosmetic bullet itself
 
@@ -107,7 +107,7 @@ If `false`, target prediction is disabled. If `true` then module will predict th
 ---
 ### Trajectory
 ```lua
-Properties.Trajectory :: {}
+Properties.Trajectory :: {}?
 ```
 If not `nil`, the projectile will attempt to follow the given trajectory. (Optional)
 
@@ -116,9 +116,9 @@ For more information, see [Custom Trajectories](CustomTrajectories.md).
 !!! example "Example"
     ```lua
     Properties.Trajectory = {
-        {["Yscale"] = 0.7392795883361921, ["Xscale"] = 0.1490480939713951, ["State"] = "Free"},
-        {["Yscale"] = 0.7438536306460835, ["Xscale"] = 0.7176853600471377, ["State"] = "Free"},
-        MaxHeight = 200
+        {Yscale = 0.3, Xscale = 0.12220414727926254, State = "Free", MaxHeight = 150},
+        {Yscale = 0.6, Xscale = 0.310281366109848, State = "Free", MaxHeight = 150},
+        {Yscale = 0.6, Xscale = 0.903989744186401, State = "Free", CheckPoint = "Above", MaxHeight = 150},
     }
     ```
 
@@ -139,7 +139,7 @@ If this value is greater than `0` (e.g., `0.1, 0.2, 0.3, ..., 1`), the module wi
 ---
 ### Offset
 ```lua
-Properties.Offset :: (TotalTime: number, DeltaTime: number, TargetPosition: Vector3, CurrentPosition: Vector3) -> (Vector3)
+Properties.Offset :: ((TotalTime: number, DeltaTime: number, TargetPosition: Vector3, CurrentPosition: Vector3) -> (Vector3))?
 ```
 This function affects the target's position
 
@@ -159,7 +159,7 @@ This function affects the target's position
 ---
 ### Scaler
 ```lua
-Properties.Scaler :: (TotalTime: number, DeltaTime: number, TargetPosition: Vector3, CurrentPosition: Vector3) -> (Vector3 | number)
+Properties.Scaler :: ((TotalTime: number, DeltaTime: number, TargetPosition: Vector3, CurrentPosition: Vector3) -> (Vector3 | number))?
 ```
 This function affects the target's position
 
@@ -177,6 +177,6 @@ This function affects the target's position
 ---
 ### UserData
 ```lua
-Properties.UserData :: {}
+Properties.UserData :: {[any]: any}
 ```
 Stores custom data

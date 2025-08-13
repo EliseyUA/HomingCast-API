@@ -8,28 +8,42 @@
 ---
 ### TerminateCast
 ```lua
-InfoCast:TerminateCast()
+InfoCast:TerminateCast(customReason: string?)
 ```
 Terminates the cast.
 
 ---
+### SetTimer
+```lua
+InfoCast:SetTimer(duration: number, func(A...) -> (R...), parameters: A...)
+```
+Sets a timer that runs the given function after the specified time.
+
+---
+### GetCosmeticBullet
+```lua
+InfoCast:GetCosmeticBullet(): any?
+```
+Retuns copied cosmetic bullet.
+
+---
 ### SetSpeed
 ```lua
-InfoCast:SetSpeed(Speed: number)
+InfoCast:SetSpeed(Speed: number | Vector3)
 ```
 Sets the speed of the cast.
 
 ---
 ### AddSpeed
 ```lua
-InfoCast:AddSpeed(Speed: number)
+InfoCast:AddSpeed(Speed: number | Vector3)
 ```
 Adds the speed to the cast.
 
 ---
 ### GetSpeed
 ```lua
-InfoCast:GetSpeed(): number
+InfoCast:GetSpeed(): (number | Vector3)
 ```
 Returns the current speed of the cast.
 
@@ -101,9 +115,9 @@ InfoCast:Pause()
 Pauses the simulation of the cast.
 
 ---
-### UnPause
+### Resume
 ```lua
-InfoCast:UnPause()
+InfoCast:Resume()
 ```
 Resumes the simulation of the cast.
 
@@ -122,9 +136,9 @@ InfoCast:PauseTrajectory()
 Pauses the trajectory from advancing.
 
 ---
-### UnPauseTrajectory
+### ResumeTrajectory
 ```lua
-InfoCast:UnPauseTrajectory()
+InfoCast:ResumeTrajectory()
 ```
 Resumes the trajectory.
 
@@ -198,9 +212,27 @@ Sets the target to the given value.
     Setting a new target too frequently can lead to unexpected behaviors!
 ---
 
+---
+### SetOffset
+```lua
+InfoCast:SetOffset(func: (number, number, Vector3, Vector3) -> (Vector3))
+```
+Sets the new `Offset` function.
+
+---
+### SetOffset
+```lua
+InfoCast:SetScaler(func: (number, number, Vector3, Vector3) -> (Vector3 | number))
+```
+Sets the new `Scaler` function.
 
 ## Physics methods
 
+### IsPhysics
+```lua
+Simulation:IsPhysics(): boolean
+```
+Returns whether projectile has physics
 
 ### SetMass
 ```lua
@@ -300,24 +332,18 @@ Simulation:AddThrustPower(ThrustPower: number)
 Adds to the thrust power used for the physics simulation
 
 ---
-### SetMaxAngle
+### SetGLimit
 ```lua
-Simulation:SetMaxAngle(MaxAngle: number)
+Simulation:SetGLimit(G_Limit: number)
 ```
-Sets the maximum angle used for the physics simulation
-
-
-Means max angle from velocity direction
+Sets the G limit used for the physics simulation
 
 ---
-### AddMaxAngle
+### AddGLimit
 ```lua
-Simulation:AddMaxAngle(MaxAngle: number)
+Simulation:AddGLimit(MaxAngle: number)
 ```
-Adds to the maximum angle used for the physics simulation
-
-
-Means max angle from velocity direction
+Adds to the G limit used for the physics simulation
 
 ---
 ### SetPitchAoA

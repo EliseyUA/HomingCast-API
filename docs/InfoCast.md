@@ -23,7 +23,7 @@ You can retrieve all currently simulated `InfoCast` using the function `HomingCa
 ```lua
 local HomingCast = require(.../HomingCast)
 
-local TableOfInfoCast: {} = HomingCast.GetAllInfoCast() -- Returns a table containing all active InfoCast
+local PreActiveInfoCasts, PostActiveInfoCasts = HomingCast.GetAllInfoCast()
 ```
 
-This function returns a table containing all active `InfoCast` that are currently being simulated.
+Returns 2 tables that contain all `PreActiveInfoCasts` and all `PostActiveInfoCasts` (PreSimulation and PostSimulation)
